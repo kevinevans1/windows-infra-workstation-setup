@@ -8,7 +8,8 @@ sudo apt install git
 
 #brew install packs
 brew update && brew install azure-cli
-brew install terraform
+brew update && brew install terraform
+brew update && brew install aztfy
 
 #Azure Bicep Install
 az bicep install
