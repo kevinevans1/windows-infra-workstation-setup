@@ -130,7 +130,7 @@ sudo apt-get install build-essential
 ```
 brew update && brew install azure-cli
 brew update && brew install terraform
-brew update && brew install aztfy
+brew update && brew install aztfexport
 ```
 2. Install Bicep from the Azure CLI
 ```
