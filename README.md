@@ -13,7 +13,7 @@ This repo aids folks walking along the StreamingClouds episode "Azure IaC develo
 These script's will install dependencies for getting you up and running with deploying Infrastructure as Code into Azure using Windows Subsystem for Linux,Terraform,Bicep,Powershell and Azure CLI.
 
 ### Operating System Requirements 
-- Windows 11 Version 21H2(OS Build 22000.795) or higher
+- Windows 11 Version 23H2 or higher
 - CPU Virtualization Enabled
 
 ### Package Managers
@@ -37,7 +37,7 @@ These script's will install dependencies for getting you up and running with dep
 - Powershell core 7 https://github.com/PowerShell/PowerShell 
 
 
-
+### Stage 1
 ### Windows Subsystem For Linux
 
 ## Installation Steps
@@ -66,7 +66,7 @@ Once completed reboot.
 
 6. Once you have located the Ubuntu 22.04 LTS page, click on the “Get” button to download it.
 
-- Ubuntu 22.04 LTS Microsoft Store Download (https://www.microsoft.com/store/productId/9PN20MSR04DW)
+- Ubuntu 22.04 LTS Microsoft Store Download (https://apps.microsoft.com/detail/9pn20msr04dw?hl=en-US&gl=US)
 
 ![Azure Windows Workstation](/assets/img/pic3.png)
 
@@ -84,7 +84,7 @@ Once completed reboot.
 
 ![Azure Windows Workstation](/assets/img/pic7.png)
 
-
+### Stage 2
 ## Chocolatey Packages (Windows Desktop)
 1. Navigate to the Windows Terminal (Run as administrator)
 - Install Chocolatey 
@@ -101,6 +101,7 @@ choco install vscode -y
 choco install powershell-core -y
 ```
 
+### Stage 3
 ## WSL Installation Packages (Ubuntu)
 1. Navigate to Ubuntu shell using Windows Terminal
 - Install Homebrew package manager, by running these commands under sudo
@@ -127,10 +128,28 @@ sudo apt-get install build-essential
 
 ## Install IaC Deployment Tools
 1. From your Ubuntu terminal run the following commands to install Azure CLI,Terraform,Azure Terrafy using Homebrew.
+
+# Radius CLI
+
+```
+curl -fsSL "https://raw.githubusercontent.com/radius-project/radius/main/deploy/install.sh" | /bin/bash
+```
+# Terraform, Azure ClI, Powershell, Tofu, Kubectl, Terraform Exporter,Helm,K9s,Pulumi. 
+
 ```
 brew update && brew install azure-cli
-brew update && brew install terraform
-brew update && brew install aztfexport
+brew update && brew install opentofu
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
+brew update
+brew install aztfexport    
+brew install kubectl
+brew install helm
+brew install k9s
+brew install powershell/tap/powershell
+brew install pulumi
+brew install tflint
+
 ```
 2. Install Bicep from the Azure CLI
 ```
@@ -167,13 +186,7 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-
-
-
-
-
-
-
+### Stage 4
 ## Git Quick Config (Run from Windows Terminal)
 When you make commits on your local system and push them to GitHub or Azure DevOps, the commit meta data determines which account name to attach to the push.
 

@@ -5,11 +5,40 @@ sudo apt install curl
 sudo apt install git
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+#Radius CLI
+curl -fsSL "https://raw.githubusercontent.com/radius-project/radius/main/deploy/install.sh" | /bin/bash
 
 #brew install packs
 brew update && brew install azure-cli
-brew update && brew install terraform
-brew update && brew install aztfy
+brew update && brew install opentofu
+
+#Terraform
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
+brew update
+
+#Azure Terraform Exporter
+brew install aztfexport
+
+#kubectl Install    
+brew install kubectl
+
+
+#Helm Install
+brew install helm
+
+#K9s Install
+brew install k9s
+
+#PowerShell Install
+brew install powershell/tap/powershell
+
+#Pulmi Install
+brew install pulumi
+
+#Terraform Linter
+brew install tflint
+
 
 #Azure Bicep Install
 az bicep install
